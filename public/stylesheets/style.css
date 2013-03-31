@@ -1,0 +1,128 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #d3d3d3;
+}
+a {
+  color: #00b7ff;
+}
+h1,
+h2 {
+  text-shadow: 0px 0px 3px #808080;
+}
+input[type="submit"],
+button {
+  border: 1px solid #000;
+  padding: 8px;
+  background: #fff;
+  box-shadow: inset 0 0 10px #000;
+  font-weight: bold;
+  border-radius: 5px;
+}
+input {
+  border-radius: 8px;
+  padding: 4px;
+}
+.message {
+  background: #ffffe0;
+  border: 1px solid #000;
+  padding: 8px;
+}
+.wrapper {
+  width: 850px;
+  padding: 20px;
+  border: 10px solid #000;
+  background: #fff;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px #000;
+  border-radius: 5px;
+}
+.menu {
+  width: 890px;
+  margin: -20px;
+  display: table;
+  padding: 0;
+  border-bottom: 10px solid #000;
+  table-layout: fixed;
+  margin-bottom: 20px;
+  background: #000;
+}
+.menu li {
+  display: table-cell;
+  text-align: center;
+}
+.menu a {
+  color: #fff;
+  display: block;
+  background: #000;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid #d3d3d3;
+  border-top: none;
+  border-bottom: none;
+}
+.menu a:hover {
+  background: #d3d3d3;
+  color: #000;
+}
+.description {
+  border: 1px solid #d3d3d3;
+  padding: 5px;
+}
+.login label {
+  display: table-cell;
+  vertical-align: top;
+}
+.login label span {
+  display: table-row;
+  font-style: italic;
+  color: #808080;
+}
+.schedule {
+  display: table;
+  margin: 0 auto;
+}
+.schedule table {
+  border-collapse: collapse;
+}
+.schedule table,
+.schedule td,
+.schedule th {
+  border: 1px solid #808080;
+}
+.schedule td,
+.schedule th {
+  width: 1px;
+  white-space: nowrap;
+  padding: 10px;
+  vertical-align: top;
+}
+.schedule th {
+  background: #d3d3d3;
+}
+.schedule .group {
+  margin-left: 10px;
+  font-style: italic;
+}
+.schedule .conflict {
+  color: #f00;
+}
+.schedule .remove {
+  width: 10px;
+  height: 10px;
+  margin: -9px;
+  float: right;
+  background: url("../images/remove.png");
+  opacity: 0.5;
+}
+.schedule .remove:hover {
+  opacity: 1;
+}
+.active-lesson {
+  background: #d3d3d3;
+  outline: 1px solid #808080;
+}

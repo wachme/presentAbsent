@@ -1,0 +1,24 @@
+h2 Klasa #{className}
+button.reset Resetuj
+table
+  tr
+    th Nr
+    th Pn
+    th Wt
+    th Śr
+    th Cz
+    th Pt
+  - for(var i = 0; i < schedule[0].length; i++)
+    tr
+      th=i
+      for day in schedule
+        td
+          if day[i]
+            .remove	
+            if day[i].length == undefined
+              - day[i] = [day[i]]
+            for lesson in day[i]
+              .lesson(class=(day[i].length > 1 ? "conflict" : ""))
+                span.name=lesson.name
+                if lesson.group != undefined
+                  span.group=lesson.group

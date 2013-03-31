@@ -1,0 +1,109 @@
+body
+  padding: 50px
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+  background: lightgray
+a
+  color: #00B7FF
+  
+h1, h2 {
+  text-shadow: 0px 0px 3px gray
+}
+
+input[type="submit"], button
+  border: 1px solid black
+  padding: 8px
+  background: white
+  box-shadow: inset 0 0 10px black
+  font-weight: bold
+  border-radius: 5px;
+  
+input
+  border-radius: 8px
+  padding: 4px
+  
+.message
+  background: lightyellow
+  border: 1px solid black
+  padding: 8px  
+
+.wrapper
+  width: 850px
+  padding: 20px
+  border: 10px solid black
+  background: white
+  margin: 0 auto
+  overflow: hidden
+  box-shadow 0px 0px 20px black
+  border-radius: 5px
+ 
+.menu
+  width: 890px
+  margin: -20px
+  display: table
+  padding: 0
+  border-bottom: 10px solid black
+  table-layout: fixed
+  margin-bottom: 20px
+  background: black
+.menu li
+  display: table-cell
+  text-align: center
+.menu a
+  color: white
+  display: block
+  background: black
+  text-decoration: none
+  text-align: center
+  padding: 5px
+  font-weight: bold
+  border-radius: 5px
+  border: 1px solid lightgray
+  border-top: none
+  border-bottom: none
+.menu a:hover
+  background: lightgray
+  color: black
+  
+.description
+  border: 1px solid lightgray
+  padding: 5px
+  
+.login label
+  display: table-cell
+  vertical-align: top
+.login label span
+  display: table-row
+  font-style: italic
+  color: gray  
+  
+.schedule
+  display: table
+  margin: 0 auto
+.schedule table
+  border-collapse: collapse
+.schedule table, .schedule td, .schedule th
+  border: 1px solid gray
+.schedule td, .schedule th
+  width: 1px
+  white-space: nowrap
+  padding: 10px
+  vertical-align: top
+.schedule th
+  background: lightgray
+.schedule .group
+  margin-left: 10px
+  font-style: italic
+.schedule .conflict
+  color: red
+.schedule .remove
+  width: 10px
+  height: 10px
+  margin: -9px
+  float: right
+  background: url('../images/remove.png')
+  opacity: 0.5
+.schedule .remove:hover
+  opacity: 1.0
+.active-lesson
+  background: lightgray
+  outline: 1px solid gray

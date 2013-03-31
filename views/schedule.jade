@@ -1,0 +1,34 @@
+extends layout
+
+append scripts
+  script(src="/javascripts/subjects.js")
+
+block nav
+  include includes/nav
+
+block content
+  h1 Twój plan lekcji
+  p.description Doprecyzuj swój plan lekcji. Każda godzina lekcyjna może zawierać maksymalnie jeden przedmiot.
+  .schedule
+    include includes/schedule
+                  
+//                
+  .subjects
+    h2 Przedmioty
+    input(placeholder="Filtruj")
+    form(action="", method="POST")
+      ul
+        for subject in subjects
+          li
+            div.name=subject.name
+            div.options
+              label usuń
+                input(type="checkbox", name="remove[]", value=subject.name)
+              if subject.groups.length > 1 || subject.groups[0] != null
+                br
+                label grupa
+                  select(name="group[" + subject.name + "]")
+                    for group in subject.groups
+                      if group != null
+                        option=group
+      input(type="submit", value="Zatwierdź")

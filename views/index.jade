@@ -1,0 +1,10 @@
+extends layout
+
+block nav
+  include includes/nav
+
+block content
+  h1 Yo
+  ul.days
+    for day in days
+      li=day.date

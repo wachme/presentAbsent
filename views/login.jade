@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1 Zaloguj się
+  p.description Zaloguj się podając dane dostępowe do Twojego konta na stronie dziennika elektronicznego.
+  if message
+    p.message=message
+  form.login(action="#", method="post")
+    label
+      input(type="text", name="login", required)
+      span Login
+    label
+      input(type="password", name="password", required)
+      span Hasło
+    label
+      select(name="className")
+        for name in classes
+          option=name
+      span Klasa
+    label
+      input(type="text", name="license", value="00088", required)
+      span ID szkoły
+    label
+      input(type="submit", value="Wejdź")
