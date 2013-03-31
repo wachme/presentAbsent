@@ -5,7 +5,6 @@ function render(req, res) {
             schedule : schedule,
         });
     });
-
 }
 
 exports.subjects = function(req, res) {

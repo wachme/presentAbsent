@@ -8,6 +8,5 @@ exports.index = function(req, res) {
                 days : analyzer.days
             });
         });
-
     });
 };

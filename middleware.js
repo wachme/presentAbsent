@@ -47,8 +47,8 @@ exports.context = function(req, res, next) {
             if (user.schedule) {
                 callback(user.schedule);
             } else {
-                this.scheduleClient().schedule(user.className, function(schedule) {
-                    user.schedule = schedule;
+                this.scheduleClient().schedule(user.className, function(s) {
+                    user.schedule = s;
                     callback(user.schedule);
                 });
             }
@@ -71,7 +71,6 @@ exports.context = function(req, res, next) {
                 });
             }
         };
-        
         next();
     }
 };

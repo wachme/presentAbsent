@@ -15,10 +15,9 @@ table
         td
           if day[i]
             .remove	
-            if day[i].length == undefined
-              - day[i] = [day[i]]
-            for lesson in day[i]
-              .lesson(class=(day[i].length > 1 ? "conflict" : ""))
+            - hour = day[i].length == undefined && [day[i]] || day[i]
+            for lesson in hour
+              .lesson(class=(hour.length > 1 ? "conflict" : ""))
                 span.name=lesson.name
                 if lesson.group != undefined
                   span.group=lesson.group

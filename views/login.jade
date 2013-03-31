@@ -6,19 +6,19 @@ block content
   if message
     p.message=message
   form.login(action="/login", method="post")
-    label
+    label.label
       input(type="text", name="login", required)
       span Login
-    label
+    label.label
       input(type="password", name="password", required)
       span Hasło
-    label
+    label.label
       select(name="className")
         for name in classes
           option=name
       span Klasa
-    label
+    label.label
       input(type="text", name="license", value="00088", required)
       span ID szkoły
-    label
+    label.label
       input(type="submit", value="Wejdź")
