@@ -1,5 +1,6 @@
 body
-  padding: 50px
+  padding: 0
+  margin: 0
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
   background: lightgray
 a
@@ -11,11 +12,13 @@ h1, h2 {
 
 input[type="submit"], button
   border: 1px solid black
-  padding: 8px
+  padding: 5px
   background: white
-  box-shadow: inset 0 0 10px black
+  box-shadow: 0 0 10px black
   font-weight: bold
-  border-radius: 5px;
+  border-radius: 5px
+  &:hover
+    box-shadow: inset 0 0 10px black
   
 input
   border-radius: 8px
@@ -25,16 +28,26 @@ input
   background: lightyellow
   border: 1px solid black
   padding: 8px  
+  
+.loader
+  position: fixed
+  background: url('../images/loading.gif') no-repeat
+  box-shadow 0px 0px 20px black
+  border-radius: 64px
+  opacity: 0.7
+  width: 64px
+  height: 64px
 
 .wrapper
   width: 850px
   padding: 20px
   border: 10px solid black
   background: white
-  margin: 0 auto
+  margin: 50px auto
   overflow: hidden
   box-shadow 0px 0px 20px black
   border-radius: 5px
+  overflow: hidden
  
 .menu
   width: 890px

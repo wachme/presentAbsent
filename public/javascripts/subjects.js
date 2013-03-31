@@ -55,10 +55,10 @@ Subjects.init = function() {
 };
 
 Subjects.submit = function() {
-    $.post('#', Subjects.form, function(data) {
+    $.post('#', Subjects.form, ajaxLoader(function(data) {
         $('.schedule').html(data);
         Subjects.init();
-    });
+    }));
 };
 
 $(Subjects.init);

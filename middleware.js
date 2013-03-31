@@ -26,7 +26,7 @@ exports.userStorage = function(params) {
             };
             res.cookie('userId', id);
         }
-        users[id].expires.setMinutes(new Date().getMinutes() + (params.lifetime || 20));
+        users[id].expires.setMinutes(new Date().getMinutes() + (params && params.lifetime || 20));
         req.user = users[id].data;
         next();
     };
@@ -60,6 +60,18 @@ exports.context = function(req, res, next) {
             }
             return this._vulcanClient;
         };
+        req.attendance = function(callback) {
+            if(user.attendance) {
+                callback(user.attendance);
+            }
+            else {
+                this.vulcanClient().attendance(function(att) {
+                    user.attendance = att;
+                    callback(user.attendance);
+                });
+            }
+        };
+        
         next();
     }
 };
