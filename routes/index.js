@@ -5,7 +5,8 @@ exports.index = function(req, res) {
         req.attendance(function(att) {
             var analyzer = new Analyzer(schedule, att);
             res.render('index', {
-                days : analyzer.days
+                days : analyzer.days,
+                frequency: analyzer.frequency
             });
         });
     });

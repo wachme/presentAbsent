@@ -14,10 +14,25 @@ block content
   table.days
     for day in days
       tr
-        td=day.date
-        td
-          for lesson in day.lessons
-            .lesson
-              if lesson
-                .name=lesson.lesson.name
-                .present=lesson.present
+        td.date=day.date.toDateString()
+        for lesson in day.lessons
+          td.lesson
+            if lesson
+              .name=lesson.lesson.name
+              .present
+                if lesson.present === true
+                  | &nbsp;
+                else
+                  =lesson.present
+  table.frequency
+    tr
+      th Przedmiot
+      th Obecne
+      th Wszystkie
+      th Frekwenca
+    for data, subject in frequency
+      tr
+        td.name=subject
+        td=data.present
+        td=data.all
+        td=(Math.round(data.present / data.all * 100 * 10) / 10) + " %"

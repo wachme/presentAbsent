@@ -141,3 +141,32 @@ input {
   background: #d3d3d3;
   outline: 1px solid #808080;
 }
+.days {
+  margin-top: 30px;
+}
+.days .date {
+  background: #808080;
+  color: #fff;
+}
+.days td {
+  padding: 3px;
+  text-align: center;
+}
+.days .present {
+  color: #f00;
+  font-weight: bold;
+}
+.days tr:nth-child(even) {
+  background: #d3d3d3;
+}
+.frequency .name {
+  font-weight: bold;
+  background: #808080;
+  color: #fff;
+}
+.frequency td {
+  padding: 10px;
+}
+.frequency tr:nth-child(even) {
+  background: #d3d3d3;
+}
