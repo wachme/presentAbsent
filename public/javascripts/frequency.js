@@ -21,11 +21,11 @@ Frequency.load = function() {
     $.post('#', {
         start: $('#start').val(),
         end: $('#end').val()
-    }, function(data) {
+    }, ajaxLoader(function(data) {
         $data = $(data);
         $('.days').html($data.filter('.days').html());
         $('.frequency').html($data.filter('.frequency').html());
-    });
+    }));
 };
 
 $(Frequency.init);

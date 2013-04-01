@@ -14,11 +14,13 @@ input[type="submit"], button
   border: 1px solid black
   padding: 5px
   background: white
-  box-shadow: 0 0 10px black
+  box-shadow: 1px 1px 8px black
   font-weight: bold
   border-radius: 5px
   &:hover
-    box-shadow: inset 0 0 10px black
+    box-shadow: -1px -1px 8px black
+    background: lightgray
+    
   
 input
   border-radius: 8px
@@ -62,9 +64,10 @@ input
   display: table-cell
   text-align: center
 .menu a
+  position: relative
   color: white
   display: block
-  background: black
+  background: rgba(0, 0, 0, 0)
   text-decoration: none
   text-align: center
   padding: 5px
@@ -73,9 +76,15 @@ input
   border: 1px solid lightgray
   border-top: none
   border-bottom: none
-.menu a:hover
-  background: lightgray
-  color: black
+  z-index: 10
+  
+.indicator
+  padding: 0
+  margin: 0
+  background: gray
+  position: absolute
+  border-radius: 5px
+  box-shadow: inset 0 0 10px black
   
 .description
   border: 1px solid lightgray
