@@ -1,0 +1,22 @@
+extends layout
+
+append scripts
+  script(src="/javascripts/ajaxLoader.js")
+  script(src="/javascripts/frequency.js")
+
+block nav
+  include includes/nav
+
+block content
+  h1 Twoja frekwencja
+  if message
+    p.message!=message
+  else
+    p.description Obejrzyj historię swojej frekwencji na lekcjach, a także statystyki dla każdego przedmiotu. Możesz ustalić okres czasu, dla którego wygenerowane będą dane.
+    label.label
+      input#start(type="date")
+      span Od
+    label.label
+      input#end(type="date")
+      span Do
+    include includes/frequency

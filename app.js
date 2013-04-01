@@ -2,7 +2,7 @@
  * Module dependencies.
  */
 
-var express = require('express'), index = require('./routes/index'), auth = require('./routes/auth'), schedule = require('./routes/schedule'), http = require('http'), path = require('path'), middle = require('./middleware');
+var express = require('express'), frequency = require('./routes/frequency'), auth = require('./routes/auth'), schedule = require('./routes/schedule'), http = require('http'), path = require('path'), middle = require('./middleware');
 
 var app = express();
 
@@ -28,7 +28,8 @@ app.configure('development', function() {
     app.use(express.errorHandler());
 });
 
-app.get('/', middle.context, index.index);
+app.get('/', middle.context, frequency.index);
+app.post('/', middle.context, frequency.indexPost)
 
 app.get('/login', auth.login);
 app.post('/login', auth.loginPost);
