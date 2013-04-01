@@ -1,3 +1,9 @@
+mixin subject(subject, data)
+  td.name=subject
+  td=(data.present || 0)
+  td=data.all
+  td=(Math.round((data.present || 0) / data.all * 100 * 10) / 10) + " %"
+
 .bar Historia
 table.days.toggle
   for day in days
@@ -23,8 +29,9 @@ table.frequency.toggle
     th Wszystkie
     th Frekwenca
   for data, subject in frequency
+    if subject != 'overall'
+      tr
+        mixin subject(subject, data)
+  if frequency.overall
     tr
-      td.name=subject
-      td=(data.present || 0)
-      td=data.all
-      td=(Math.round((data.present || 0) / data.all * 100 * 10) / 10) + " %"
+      mixin subject('WSZYSTKO', frequency.overall)
