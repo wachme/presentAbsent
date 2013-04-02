@@ -6,6 +6,8 @@ var express = require('express'), frequency = require('./routes/frequency'), aut
 
 var app = express();
 
+app.set('env', 'development');
+
 app.configure(function() {
     app.set('port', process.env.PORT || 3000);
     app.set('views', __dirname + '/views');
@@ -22,6 +24,10 @@ app.configure(function() {
     app.use(app.router);
     app.use(express.static(path.join(__dirname, 'public')));
 
+});
+
+app.configure('production', function() {
+    app.set('port', process.env.VMC_APP_PORT || 1337);  
 });
 
 app.configure('development', function() {

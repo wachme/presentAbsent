@@ -26,7 +26,7 @@ exports.userStorage = function(params) {
             };
             res.cookie('userId', id);
         }
-        users[id].expires.setMinutes(new Date().getMinutes() + (params && params.lifetime || 20));
+        users[id].expires.setMinutes(new Date().getMinutes() + (params && params.lifetime || 30));
         req.user = users[id].data;
         next();
     };
