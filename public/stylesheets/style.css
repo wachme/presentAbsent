@@ -181,7 +181,8 @@ input {
   background: #808080;
   color: #fff;
 }
-.frequency td {
+.frequency td,
+.frequency th {
   padding: 10px;
 }
 .frequency tr:nth-child(even) {

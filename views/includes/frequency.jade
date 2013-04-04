@@ -1,6 +1,7 @@
 mixin subject(subject, data)
   td.name=subject
   td=(data.present || 0)
+  td=(data['-'] || 0)
   td=data.all
   td=(Math.round((data.present || 0) / data.all * 100 * 10) / 10) + " %"
 
@@ -26,6 +27,7 @@ table.frequency.toggle
   tr
     th Przedmiot
     th Obecne
+    th Nieusprawiedliwione
     th Wszystkie
     th Frekwenca
   for data, subject in frequency
