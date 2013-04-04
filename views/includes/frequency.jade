@@ -18,7 +18,7 @@ table.days.toggle
               if lesson.present === true
                 | &nbsp;
               else
-                =lesson.present
+                span=lesson.present
           else
             | &nbsp;
               
@@ -37,3 +37,8 @@ table.frequency.toggle
   if frequency.overall
     tr
       mixin subject('WSZYSTKO', frequency.overall)
+      
+.bar Statystyki
+.stats.toggle
+  for subject in subjects
+    p=subject.name

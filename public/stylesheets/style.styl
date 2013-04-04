@@ -87,6 +87,7 @@ input
 .description
   border: 1px solid lightgray
   padding: 5px
+  line-height: 20px
   
 .label
   display: table-cell
@@ -149,9 +150,14 @@ input
 .days td
   padding: 3px
   text-align: center
-.days .present
-  color: red
+.days .present span
+  background: #00B7FF
+  border-radius: 10px
+  min-width: 20px
+  display: inline-block
   font-weight: bold
+  text-shadow: 0 0 5px black
+  color: white
 .days tr:nth-child(even)
   background: lightgray
   
@@ -163,3 +169,29 @@ input
   padding: 10px
 .frequency tr:nth-child(even)
   background: lightgray
+
+.subjects-bar
+  display: table-cell
+  padding: 5px
+  padding-right: 30px
+  border: 2px solid gray
+  border-radius: 8px
+  border-bottom-left-radius: 0
+  border-bottom-right-radius: 0
+  background: url('../images/expand.png') no-repeat
+  background-position: bottom 5px right 5px
+  vertical-align: middle
+.subjects
+  list-style: none
+  max-width: 600px
+  margin: -2px 0
+  padding: 5px
+  border: 2px solid gray
+  box-shadow: 3px 3px 8px black
+  display: none
+  position: absolute
+  background: white
+.subjects label
+  padding: 15px
+  display: inline-block
+  
