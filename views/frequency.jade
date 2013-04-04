@@ -12,11 +12,21 @@ block content
   if message
     p.message!=message
   else
-    p.description Obejrzyj historię swojej frekwencji na lekcjach, a także statystyki dla każdego przedmiotu. Możesz ustalić okres czasu, dla którego wygenerowane będą dane.
+    p.description Obejrzyj historię swojej frekwencji na lekcjach, a także statystyki dla każdego przedmiotu. Możesz ustalić okres czasu i przedmioty, dla których wygenerowane będą dane.
     label.label
       input#start(type="date")
       span Od
     label.label
       input#end(type="date")
       span Do
+    .subjects-bar
+      | Wybierz przedmioty
+    .subjects
+      label.label
+        input#all(type="checkbox", checked)
+        span (wszystko)
+      for subject, i in subjects
+        label.label
+          input(type="checkbox", value=subject.name, checked)
+          span=subject.name
     include includes/frequency
