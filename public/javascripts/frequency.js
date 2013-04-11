@@ -46,8 +46,4 @@ Frequency.load = function() {
     }));
 };
 
-Frequency.drawChart = function() {
-    
-};
-
 $(Frequency.init);
